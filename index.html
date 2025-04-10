@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biostatistics Portfolio</title>
+    <title>BioStatistics & BioInformatics - María C. Palla Moro</title>
     <style>
         * {
             margin: 0;
@@ -16,407 +16,126 @@
             line-height: 1.6;
             color: #333;
             background-color: #f8f9fa;
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
         }
         
         header {
-            background: linear-gradient(135deg, #4a6fa5 0%, #23395b 100%);
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-        }
-        
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #4a6fa5;
+            padding-bottom: 15px;
         }
         
         h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
+            color: #23395b;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
         }
         
         .subtitle {
-            font-size: 1.2rem;
-            font-weight: 300;
-            margin-bottom: 1rem;
-        }
-        
-        nav {
-            background-color: #23395b;
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        nav ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-        
-        nav ul li {
-            margin: 0 1rem;
-        }
-        
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        nav ul li a:hover {
-            color: #a3c9ea;
+            font-size: 1.1rem;
+            color: #666;
         }
         
         section {
-            padding: 4rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
+            margin-bottom: 40px;
         }
         
         h2 {
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            color: #23395b;
-            border-bottom: 2px solid #4a6fa5;
-            padding-bottom: 0.5rem;
-        }
-        
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 2rem;
-            align-items: center;
-        }
-        
-        .profile-img {
-            width: 100%;
-            border-radius: 50%;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-        
-        .skill-card {
-            background-color: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        
-        .skill-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-        
-        .skill-card h3 {
             color: #4a6fa5;
-            margin-bottom: 1rem;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
         }
         
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 2rem;
+        p {
+            margin-bottom: 15px;
         }
         
-        .project-card {
+        .activities-list {
+            list-style-type: none;
+            margin-top: 20px;
+        }
+        
+        .activity-item {
             background-color: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s, box-shadow 0.3s;
+            margin-bottom: 15px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
         }
         
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        .activity-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
         }
         
-        .project-img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        
-        .project-content {
-            padding: 1.5rem;
-        }
-        
-        .project-content h3 {
+        .activity-item h3 {
             color: #23395b;
-            margin-bottom: 0.5rem;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
         }
         
-        .project-content p {
-            margin-bottom: 1rem;
+        .activity-item p {
+            margin-bottom: 15px;
         }
         
-        .btn {
+        .activity-link {
             display: inline-block;
             background-color: #4a6fa5;
             color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
+            padding: 8px 15px;
             text-decoration: none;
-            transition: background-color 0.3s;
-        }
-        
-        .btn:hover {
-            background-color: #23395b;
-        }
-        
-        .publication-card {
-            background-color: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            margin-bottom: 1.5rem;
-        }
-        
-        .publication-card h3 {
-            color: #23395b;
-            margin-bottom: 0.5rem;
-        }
-        
-        .publication-card .authors {
-            font-style: italic;
-            margin-bottom: 0.5rem;
-        }
-        
-        .publication-card .journal {
-            color: #4a6fa5;
+            border-radius: 4px;
             font-weight: 500;
+            transition: background-color 0.2s;
         }
         
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: center;
-        }
-        
-        .contact-icon {
-            width: 50px;
-            height: 50px;
-            margin-right: 1rem;
+        .activity-link:hover {
+            background-color: #23395b;
         }
         
         footer {
-            background-color: #23395b;
-            color: white;
+            margin-top: 40px;
             text-align: center;
-            padding: 2rem 0;
-        }
-        
-        @media (max-width: 768px) {
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .profile-img {
-                max-width: 250px;
-                margin: 0 auto 2rem;
-            }
-            
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            nav ul li {
-                margin: 0.5rem 0;
-            }
+            color: #666;
+            font-size: 0.9rem;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="header-content">
-            <h1>María C. Palla Moro</h1>
-            <p class="subtitle">Biostatistician & Data Analyst</p>
-        </div>
+        <h1>BioStatistics & BioInformatics</h1>
+        <p class="subtitle">María C. Palla Moro</p>
     </header>
     
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#publications">Publications</a></li>
-            <li><a href="#contact">Contact</a></li>
+    <section>
+        <h2>About This Section</h2>
+        <p>Welcome to my biostatistics and bioinformatics research portfolio. This section showcases my work in statistical analysis and computational approaches to biological data. Here you'll find various analyses and projects that demonstrate my expertise in these fields.</p>
+        <p>My research focuses on applying statistical methods to understand biological processes and health outcomes, with a particular interest in cancer research and survival analysis.</p>
+    </section>
+    
+    <section>
+        <h2>Current Activities</h2>
+        <ul class="activities-list">
+            <li class="activity-item">
+                <h3>Lung Cancer Data Analysis</h3>
+                <p>A comprehensive analysis of factors associated with lung cancer, including exploratory data analysis, statistical modeling, and predictive analytics to identify key risk factors.</p>
+                <a href="lung_cancer_data_analysis.html" class="activity-link">View Analysis</a>
+            </li>
+            <li class="activity-item">
+                <h3>Survival Analysis in Clinical Trials</h3>
+                <p>Application of survival analysis techniques to clinical trial data, including Kaplan-Meier estimation, Cox proportional hazards modeling, and competing risks analysis.</p>
+                <a href="survival_analysis.html" class="activity-link">View Analysis</a>
+            </li>
         </ul>
-    </nav>
-    
-    <section id="about">
-        <h2>About Me</h2>
-        <div class="about-content">
-            <img src="/api/placeholder/400/400" alt="María C. Palla Moro" class="profile-img">
-            <div>
-                <p>Welcome to my biostatistics portfolio! I am a dedicated biostatistician with expertise in statistical analysis, data visualization, and research methodology. My work focuses on analyzing health-related data to drive evidence-based decisions and improve public health outcomes.</p>
-                <p>With a strong background in statistical programming and research design, I specialize in analyzing complex datasets to extract meaningful insights. My expertise spans clinical trials, epidemiological studies, and health services research.</p>
-                <p>I am passionate about translating complex statistical concepts into actionable insights for healthcare professionals and researchers. My goal is to contribute to advancements in medical research through rigorous statistical analysis and methodology.</p>
-            </div>
-        </div>
-    </section>
-    
-    <section id="skills">
-        <h2>Skills & Expertise</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <h3>Statistical Analysis</h3>
-                <ul>
-                    <li>Regression Analysis</li>
-                    <li>Survival Analysis</li>
-                    <li>Multivariate Methods</li>
-                    <li>Longitudinal Data Analysis</li>
-                    <li>Power Analysis & Sample Size Calculation</li>
-                </ul>
-            </div>
-            
-            <div class="skill-card">
-                <h3>Programming</h3>
-                <ul>
-                    <li>R</li>
-                    <li>SAS</li>
-                    <li>SPSS</li>
-                    <li>Python (pandas, scikit-learn)</li>
-                    <li>SQL</li>
-                </ul>
-            </div>
-            
-            <div class="skill-card">
-                <h3>Study Design</h3>
-                <ul>
-                    <li>Clinical Trial Design</li>
-                    <li>Observational Studies</li>
-                    <li>Case-Control Studies</li>
-                    <li>Cohort Studies</li>
-                    <li>Cross-Sectional Studies</li>
-                </ul>
-            </div>
-            
-            <div class="skill-card">
-                <h3>Data Visualization</h3>
-                <ul>
-                    <li>ggplot2</li>
-                    <li>Tableau</li>
-                    <li>Matplotlib/Seaborn</li>
-                    <li>Interactive Dashboards</li>
-                    <li>Statistical Graphics</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    
-    <section id="projects">
-        <h2>Featured Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <img src="/api/placeholder/400/200" alt="Lung Cancer Factors Analysis" class="project-img">
-                <div class="project-content">
-                    <h3>Analysis of Factors Associated with Lung Cancer</h3>
-                    <p>Comprehensive statistical analysis of risk factors associated with lung cancer diagnosis, using multivariable logistic regression models to identify key predictors.</p>
-                    <a href="#" class="btn">View Project</a>
-                </div>
-            </div>
-            
-            <div class="project-card">
-                <img src="/api/placeholder/400/200" alt="COVID-19 Data Analysis" class="project-img">
-                <div class="project-content">
-                    <h3>COVID-19 Outcomes Prediction Model</h3>
-                    <p>Developed and validated a statistical model to predict severe outcomes in COVID-19 patients using demographic, clinical, and laboratory variables.</p>
-                    <a href="#" class="btn">View Project</a>
-                </div>
-            </div>
-            
-            <div class="project-card">
-                <img src="/api/placeholder/400/200" alt="Clinical Trial Analysis" class="project-img">
-                <div class="project-content">
-                    <h3>Survival Analysis in Oncology Clinical Trials</h3>
-                    <p>Statistical analysis of time-to-event data from multiple oncology clinical trials, including Cox proportional hazards modeling and Kaplan-Meier estimation.</p>
-                    <a href="#" class="btn">View Project</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="publications">
-        <h2>Selected Publications</h2>
-        <div class="publication-card">
-            <h3>Statistical Methods for Analyzing Lung Cancer Risk Factors: A Comprehensive Review</h3>
-            <p class="authors">Palla Moro, M.C., García, A., & Rodríguez, J.</p>
-            <p class="journal">Journal of Biostatistics and Epidemiology (2024)</p>
-            <p>A systematic review of statistical methodologies employed in lung cancer risk factor research, highlighting strengths and limitations of various analytical approaches.</p>
-        </div>
-        
-        <div class="publication-card">
-            <h3>Predictive Modeling for Patient Outcomes in Respiratory Disease: A Machine Learning Approach</h3>
-            <p class="authors">Palla Moro, M.C., Smith, K., & Johnson, L.</p>
-            <p class="journal">BMC Medical Research Methodology (2023)</p>
-            <p>Development and validation of machine learning models to predict patient outcomes in respiratory diseases, comparing traditional statistical methods with modern algorithms.</p>
-        </div>
-        
-        <div class="publication-card">
-            <h3>Meta-Analysis of Biomarkers for Early Lung Cancer Detection</h3>
-            <p class="authors">Martínez, R., Palla Moro, M.C., & Wilson, T.</p>
-            <p class="journal">Cancer Biomarkers (2022)</p>
-            <p>A comprehensive meta-analysis evaluating the diagnostic accuracy of various biomarkers for early detection of lung cancer, including detailed statistical assessment of sensitivity and specificity.</p>
-        </div>
-    </section>
-    
-    <section id="contact">
-        <h2>Contact Information</h2>
-        <div class="contact-grid">
-            <div class="contact-item">
-                <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#4a6fa5">
-                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                </svg>
-                <div>
-                    <h3>Email</h3>
-                    <p>maria.palla@example.com</p>
-                </div>
-            </div>
-            
-            <div class="contact-item">
-                <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#4a6fa5">
-                    <path d="M12 12c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm6-1.8C18 6.57 15.35 4 12 4s-6 2.57-6 6.2c0 2.34 1.95 5.44 6 9.14 4.05-3.7 6-6.8 6-9.14zM12 2c4.2 0 8 3.22 8 8.2 0 3.32-2.67 7.25-8 11.8-5.33-4.55-8-8.48-8-11.8C4 5.22 7.8 2 12 2z"/>
-                </svg>
-                <div>
-                    <h3>Location</h3>
-                    <p>Madrid, Spain</p>
-                </div>
-            </div>
-            
-            <div class="contact-item">
-                <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#4a6fa5">
-                    <path d="M16 8c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zM4 8c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm12 10c-4.41 0-8-3.59-8-8 0-.29.02-.58.05-.86 2.36-1.05 4.23-2.98 5.21-5.37C13.5 3.64 13.76 4 14.07 4h3.93c1.1 0 2-.9 2-2H10c-.55 0-1 .45-1 1 0 .94-.54 1.84-1.39 2.22C6.33 6 5.36 7.31 4.93 8.84 4.37 10.32 4 11.96 4 13.5c0 5.24 4.26 9.5 9.5 9.5h5.5c1.1 0 2-.9 2-2h-5z"/>
-                </svg>
-                <div>
-                    <h3>LinkedIn</h3>
-                    <p><a href="https://linkedin.com/in/mariacpallamoro" style="color: #4a6fa5; text-decoration: none;">linkedin.com/in/mariacpallamoro</a></p>
-                </div>
-            </div>
-        </div>
     </section>
     
     <footer>
-        <p>&copy; 2025 María C. Palla Moro | Biostatistician & Data Analyst</p>
+        <p>&copy; 2025 María C. Palla Moro | For more information, please find me at <a href="https://www.linkedin.com/in/conchipalla/>LinkedLn</a> </p>
     </footer>
 </body>
 </html>
